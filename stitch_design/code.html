@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vanya Chai | The Eternal Monsoon Ritual</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#131313",
+                    "tertiary-container": "#472400",
+                    "surface": "#131313",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary": "#ffb779",
+                    "on-primary-container": "#ae8d87",
+                    "primary-fixed-dim": "#e3beb8",
+                    "outline-variant": "#504442",
+                    "on-tertiary": "#4c2700",
+                    "on-secondary-fixed": "#2e1500",
+                    "surface-container-high": "#2a2a2a",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#353535",
+                    "on-primary-fixed": "#2b1613",
+                    "tertiary-fixed": "#ffdcc1",
+                    "on-secondary": "#4c2700",
+                    "on-error": "#690005",
+                    "primary-fixed": "#ffdad4",
+                    "surface-dim": "#131313",
+                    "on-tertiary-container": "#d08235",
+                    "surface-tint": "#e3beb8",
+                    "tertiary-fixed-dim": "#ffb779",
+                    "inverse-primary": "#745853",
+                    "surface-bright": "#393939",
+                    "on-surface-variant": "#d3c3c0",
+                    "primary": "#e3beb8",
+                    "secondary-container": "#d7790d",
+                    "surface-container-lowest": "#0e0e0e",
+                    "error": "#ffb4ab",
+                    "on-background": "#e5e2e1",
+                    "outline": "#9c8d8b",
+                    "secondary-fixed-dim": "#ffb77a",
+                    "on-secondary-container": "#432100",
+                    "secondary": "#ffb77a",
+                    "surface-variant": "#353535",
+                    "surface-container-low": "#1c1b1b",
+                    "on-tertiary-fixed": "#2e1500",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#ffdcc2",
+                    "inverse-on-surface": "#313030",
+                    "on-tertiary-fixed-variant": "#6c3a00",
+                    "on-surface": "#e5e2e1",
+                    "on-primary-fixed-variant": "#5b403c",
+                    "on-secondary-fixed-variant": "#6d3a00",
+                    "primary-container": "#3e2723",
+                    "surface-container": "#20201f",
+                    "on-primary": "#422a26"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-safe": "5vw",
+                    "unit": "8px",
+                    "section-gap": "128px",
+                    "container-max": "1440px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "label-caps": ["Montserrat"],
+                    "display-hero": ["Playfair Display"],
+                    "body-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                    "display-hero": ["84px", {"lineHeight": "1.1", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(62, 39, 35, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 114, 91, 0.2);
+        }
+        .cinematic-shadow {
+            box-shadow: 0 20px 50px rgba(26, 26, 26, 0.8), 0 0 30px rgba(62, 39, 35, 0.4);
+        }
+        .amber-glow {
+            box-shadow: 0 0 40px rgba(255, 153, 51, 0.15);
+        }
+        .steam-overlay {
+            background: linear-gradient(to top, transparent, rgba(227, 190, 184, 0.05), transparent);
+            pointer-events: none;
+        }
+        .horizontal-scroll-mask {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Section 1: FLOATING LUXURY NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-4 bg-primary-container/40 dark:bg-primary-container/40 backdrop-blur-xl rounded-full mt-4 mx-safe max-w-container-max border border-secondary/20 dark:border-secondary-fixed/20 shadow-[0_20px_50px_rgba(62,39,35,0.3)] mx-auto">
+<div class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed-dim">Vanya Chai</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b border-secondary/50 pb-1 font-body-md text-body-md" href="#">The Ritual</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Collections</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Origins</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Heritage</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary hover:scale-105 transition-transform" data-icon="search">search</button>
+<button class="material-symbols-outlined text-primary hover:scale-105 transition-transform" data-icon="shopping_bag">shopping_bag</button>
+<button class="md:hidden material-symbols-outlined text-primary" data-icon="menu">menu</button>
+</div>
+</nav>
+<!-- Section 2: HERO -->
+<section class="relative h-screen w-full flex items-center overflow-hidden pt-24">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-key close-up of amber chai being poured into a traditional clay kulhad. The scene is illuminated by warm, directional light that highlights the rising steam and floating cardamom pods. The background is a dark, moody luxury cafe setting with polished brass kettles and rich wood textures, maintaining a prestigious and sensory atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEauDVAwzZ0CCxRkO3AmR6PB65Vz9N76iEne9F3fKUZ6rza4QCKKIAF_42DCUccWbk783cXY411yzinsBnCAhr6gTvMEZHLa2aucwTLuZZ1aOjryyv4eKwqlGYeK6Ne2e03X16eqc-rsKkLHfh6pXmw-2dAbFeiz9pAMgPYEsXaWxMi-ShUbjdWfxn2YHhGpEU1QsVIsP6yafqBXByJEBVrwcmr0gPFnGGPQ7JUZaB5Xb0CLdeBKO5qLvPVpipkTVaKUa7XShd2p8Q"/>
+</div>
+<div class="relative z-20 px-margin-safe grid md:grid-cols-2 gap-gutter w-full">
+<div class="flex flex-col justify-center gap-unit">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.3em] uppercase">Est. 1924</span>
+<h1 class="font-display-hero text-display-hero text-on-surface max-w-xl leading-none">India Brews In Every Sip</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-6 max-w-md">Experience the transcendence of the monsoon ritual. Handcrafted, heritage-driven, and purely sensory.</p>
+<div class="mt-10 flex gap-6">
+<button class="bg-[#CD7F32] text-white px-10 py-4 rounded-full font-label-caps text-label-caps amber-glow hover:scale-105 transition-all">Explore Reserve</button>
+<button class="border border-secondary/40 backdrop-blur-md px-10 py-4 rounded-full font-label-caps text-label-caps text-on-surface hover:bg-white/5 transition-all">Our Story</button>
+</div>
+</div>
+<div class="hidden md:flex justify-center items-center relative">
+<div class="absolute w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px]"></div>
+<!-- This would be where the floating elements would sit -->
+</div>
+</div>
+</section>
+<!-- Section 3: STORY -->
+<section class="py-section-gap px-margin-safe max-w-container-max mx-auto">
+<div class="grid md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 relative">
+<img class="w-full aspect-[4/5] object-cover rounded-xl cinematic-shadow" data-alt="A documentary-style editorial photograph of emerald green tea plantations shrouded in heavy morning mist. The lighting is soft and ethereal, capturing the lush texture of tea leaves and the vast, rolling hills of the Indian highlands. The color palette is dominated by deep forest greens and soft vaporous whites, evoking a sense of calm and heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCut1ANGVu8HIYojxarPpBwAkqAyq3sGrzjRIBEWwMjjvlHdqZEvqN_Fds_a7a3O-5ec8vt8zPRK0XqmYd5QS3xOgYMNlWynPm6XdOwfe-bb6MtZyz_PI_733N0LJKjckvW9I42bjG1kk3VOKi_ymREdumQP2--99hnCaeIeY9uRkEpZwZ8zP6n7AhFVFnJ7bqHS1bfFRgFsAzE77NwysE0oKBZHJvcGhH8gl6XWjbLGcbc21V270wEyRz0L1uC7GOeyRKmw4TLLoN_"/>
+<div class="absolute -bottom-12 -right-12 w-1/2 hidden md:block">
+<img class="w-full aspect-square object-cover rounded-xl border-8 border-background cinematic-shadow" data-alt="Extreme close-up of sun-dried loose leaf tea mixed with star anise and crushed cinnamon sticks. The lighting is dramatic and tactile, revealing the organic textures and rich brown and copper tones of the spices. This luxury editorial shot emphasizes the handcrafted quality and premium ingredients of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmx_fX27FprlOHv-w7fFcgAgTKTrvf-zpBrVeEo3qFe3zZNxNKXFO6JNyZrAyKE4u9yCAcbjjzm1m9e3w1gItLbVtjj-f123sONGHa1k_AuzoCJiy62QfTL7ZMsWRfIzLewn51DnQLgCRhn6kAjCBbsAtOOUFphRKPxlBTefAQiZgCn8rEV5iDRK2Sgptw9zGMvhvK4jamBYzHy6OJkyHbI66f32LxovL6d-UwKFc_GSLDhJnUJMM0tqnrQPB1iLK48V9gaLnU7w57"/>
+</div>
+</div>
+<div class="md:col-span-5 md:pl-12 mt-24 md:mt-0">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">Heritage</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">The Alchemy of Hands</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Born from the misty peaks of the Blue Mountains, Imperial Chai is more than a beverage. It is a legacy preserved through four generations of tea masters.</p>
+<p class="font-body-md text-body-md text-on-surface-variant/80">Every harvest is hand-picked at dawn, when the leaves are heavy with dew, ensuring a profile that is as complex as the soil from which it springs.</p>
+<a class="mt-8 inline-block font-label-caps text-label-caps text-secondary border-b border-secondary pb-1 hover:text-primary hover:border-primary transition-all" href="#">Discover the Process</a>
+</div>
+</div>
+</section>
+<!-- Section 4: EXPERIENCE -->
+<section class="bg-surface-container-low py-section-gap overflow-hidden">
+<div class="flex gap-gutter px-margin-safe horizontal-scroll-mask overflow-x-auto pb-12">
+<div class="min-w-[400px] flex-shrink-0 group">
+<div class="font-display-hero text-display-hero opacity-10 text-outline leading-none group-hover:opacity-30 transition-opacity">WARMTH</div>
+<div class="glass-panel p-12 -mt-10 relative z-10 cinematic-shadow">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">A Soul's Comfort</h3>
+<p class="text-on-surface-variant">The immediate embrace of heat that radiates through the palms on a rainy afternoon.</p>
+</div>
+</div>
+<div class="min-w-[400px] flex-shrink-0 group">
+<div class="font-display-hero text-display-hero opacity-10 text-outline leading-none group-hover:opacity-30 transition-opacity">AROMA</div>
+<div class="glass-panel p-12 -mt-10 relative z-10 cinematic-shadow">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Floral Spice</h3>
+<p class="text-on-surface-variant">Top notes of cardamom dancing with the deep, earthy base of Assam CTC tea.</p>
+</div>
+</div>
+<div class="min-w-[400px] flex-shrink-0 group">
+<div class="font-display-hero text-display-hero opacity-10 text-outline leading-none group-hover:opacity-30 transition-opacity">HOSPITALITY</div>
+<div class="glass-panel p-12 -mt-10 relative z-10 cinematic-shadow">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Universal Bond</h3>
+<p class="text-on-surface-variant">The timeless gesture of sharing a cup, bridging hearts across generations.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: COLLECTION -->
+<section class="py-section-gap px-margin-safe">
+<div class="flex flex-col items-center text-center mb-24">
+<span class="font-label-caps text-label-caps text-secondary mb-4">Curated Reserve</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Private Collections</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter max-w-container-max mx-auto">
+<!-- Card 1 -->
+<div class="glass-panel p-8 rounded-xl relative group hover:-translate-y-4 transition-transform duration-500">
+<div class="h-80 w-full mb-8 relative">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" data-alt="A luxury product shot of a minimalist black tea tin with a gold embossed Imperial Chai logo. The tin is surrounded by whole cinnamon sticks and star anise on a polished mahogany surface. The lighting is dramatic and high-contrast, creating deep shadows and bright gold highlights to signify a premium, high-end collection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz0Y8oI1tXGYxPOvXxCWRa0EvNIz6F9HUSRScifWxIL_RpqvlQG7OypwFI16x6BMVBVUjyNHFnhzRuAqBL95KHfVT176WRXYmyuyBLIowFiK7WF4l9L9vSX6JuL86v2N6ezqCi-sTZIYS9VwZ5Z7MV3vj8GsYrJAs1lYAWt-mGdFY-_aEXG8WABHwCK0tZCncstobfHbqjGGGTtUFvAmWusIqIJpX1Urq65Jr-c0jZWNjGDlmF2xTS7MMeZZO21BP2iXbirZbm5p9g"/>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary">Classic Bold</span>
+<h4 class="font-headline-md text-headline-md text-on-surface my-2">Monsoon Masala</h4>
+<p class="text-on-surface-variant mb-6">A spirited blend of seven ancient spices and bold mountain tea.</p>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/30">
+<span class="font-headline-md text-headline-md text-secondary">$48</span>
+<button class="material-symbols-outlined text-primary hover:text-secondary" data-icon="add_circle">add_circle</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel p-8 rounded-xl relative group hover:-translate-y-4 transition-transform duration-500 amber-glow">
+<div class="h-80 w-full mb-8 relative">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" data-alt="A close-up of a steaming porcelain cup of chai, with a rich layer of creamy froth on top and a light dusting of saffron threads. The background is softly blurred with warm amber light from a nearby window. The image feels cozy yet extremely luxurious, focusing on the sensory texture of the beverage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALkJwzmX0s0SrHeZF3v38yB9GRJYW8GwxWxKneBBSrJlR7fGVOqJj6MAXdKpTRRIntoav0OVKvOApa71Vk73CqwDxCMJBEi0czm-U0HxNt2bKPiWTCj43WnauPjoyE82g_8iV8ygfxnuLVVv8TgJb6eCMFHYMWDeV_pswDIMaoAoNbAnJZeTFq6MOlqffXM6ekzbkIAqYeli7QOu_dkgeTiMtLTxaVOKRmZjKQOUKDyT6dWZp-QPb7umrHjKtwpY7KK8V3zQH7cZ7K"/>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary">Rare Reserve</span>
+<h4 class="font-headline-md text-headline-md text-on-surface my-2">Saffron Elixir</h4>
+<p class="text-on-surface-variant mb-6">Infused with pure Kashmiri saffron for a golden, royal finish.</p>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/30">
+<span class="font-headline-md text-headline-md text-secondary">$64</span>
+<button class="material-symbols-outlined text-primary hover:text-secondary" data-icon="add_circle">add_circle</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel p-8 rounded-xl relative group hover:-translate-y-4 transition-transform duration-500">
+<div class="h-80 w-full mb-8 relative">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" data-alt="Artisanal glass jars filled with different tea blends, arranged in a minimalist, luxury kitchen setting. The lighting is soft and warm, illuminating the various textures of the dried leaves and spices within the jars. The color palette is earthy and sophisticated, with accents of copper and brass in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDSOwX9GIwxjGMY1NbEuC4_o9FL80EJGGTtIIhx9z1wU6KuC2-GFx5SrncPJRAZlQPq4dEPlNHy0czzmBNVEkzlWvCB3kbY1QA522aWAjfv5sVMW4JSUzO5T-It8gANp5lixjBgUn5miqIcL-b7eMr39NX_lV4Zpsw3mTQ6WujNADNbwkfgCFn82GA5sLzGDrA6j2LtgC2YdAgZDgjQ4C8WiilZPCm_ZUUIwmTOEhpcPVJFAXrcbdYS3jlGrAo0U6i537EvizqtYLd"/>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary">Floral Infusion</span>
+<h4 class="font-headline-md text-headline-md text-on-surface my-2">Rose Heritage</h4>
+<p class="text-on-surface-variant mb-6">Velvety dried rose petals balanced with delicate ginger notes.</p>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant/30">
+<span class="font-headline-md text-headline-md text-secondary">$52</span>
+<button class="material-symbols-outlined text-primary hover:text-secondary" data-icon="add_circle">add_circle</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: RITUAL -->
+<section class="h-[819px] flex flex-col md:flex-row">
+<div class="flex-1 relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A vertical composition showing a traditional brass tea kettle boiling over an open fire. The golden flames flicker at the base, and dense white steam rises beautifully into the dark surroundings. The lighting is dramatic and cinematic, highlighting the orange glow of the fire and the polished surface of the kettle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN6uY0NmkXjABGdOaniXkSpKNeN11o1ObctdJyOqRTGReXRvydyThUeVxBlF0GBuYIOpl6-THvI6Z-4YQuVxo4AaAYzWpjcDrz5gj0CBxkTPAuRrwYmlzfgFdoSKUpiGWn9focAC73NX09hptT8026CJZtQH8FDS-8qZwZ9nCJarJ-YrQvu9L5d4CFW00MmYJT9u6ScdkGTgytY-1HFFJVBT8KYqziAjBxUZO-3qoHtkRwpTJ0ziQmpRwSjHYCJcw-EAwvqwAHomGt"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<h3 class="font-headline-lg text-headline-lg text-white drop-shadow-2xl">The Boil</h3>
+</div>
+</div>
+<div class="flex-1 relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A high-speed cinematic shot of milk being poured into a dark tea infusion, creating a swirling, marbled effect of creams and browns. The lighting is focused and crisp, capturing the movement of the liquid and the tiny droplets in the air. The mood is artistic and sensory, emphasizing the beauty of the ritual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3CxHOUl47e2klmMr6g6NA6bhl-TPiGidbionSSbw0COWyjpEWt0B6PoJKYpYvPpMMv0nuL47y_w4obfKzrHCGMWu85-6_ALXLDNFshURaABD1pgsvgM-B5uc4EDdvXW_BpkZf4URE3OUmrEnF8wkziz07Gx2u6QFgaL1mkm-XfjpE1y1rql59U3HaLwjGyP90rSaJP0P-vX56t0vx20ZWedK6VW_3W1xZfE330y8dDaR0fQGPZDwxSfNHOY6kPnwl2BxFh0QL4z8m"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<h3 class="font-headline-lg text-headline-lg text-white drop-shadow-2xl">The Pour</h3>
+</div>
+</div>
+</section>
+<!-- Section 7: INGREDIENTS -->
+<section class="py-section-gap px-margin-safe max-w-container-max mx-auto overflow-hidden">
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="flex-1">
+<span class="font-label-caps text-label-caps text-secondary">The Botanical Gallery</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-4 mb-12">Gifts of the Earth</h2>
+<div class="space-y-12">
+<div class="border-b border-outline-variant/30 pb-8 group cursor-pointer">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-headline-md text-headline-md text-on-surface">Cardamom Pods</h4>
+<span class="material-symbols-outlined text-secondary group-hover:rotate-45 transition-transform" data-icon="north_east">north_east</span>
+</div>
+<p class="text-on-surface-variant max-w-sm">Harvested from the lush hills of Idukki, these emerald pods offer a bright, citrusy perfume.</p>
+</div>
+<div class="border-b border-outline-variant/30 pb-8 group cursor-pointer">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-headline-md text-headline-md text-on-surface">Ceylon Cinnamon</h4>
+<span class="material-symbols-outlined text-secondary group-hover:rotate-45 transition-transform" data-icon="north_east">north_east</span>
+</div>
+<p class="text-on-surface-variant max-w-sm">True quills with a sweet, woody depth that lingers long after the first sip.</p>
+</div>
+<div class="border-b border-outline-variant/30 pb-8 group cursor-pointer">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-headline-md text-headline-md text-on-surface">Organic Saffron</h4>
+<span class="material-symbols-outlined text-secondary group-hover:rotate-45 transition-transform" data-icon="north_east">north_east</span>
+</div>
+<p class="text-on-surface-variant max-w-sm">The world's most precious spice, lending a regal golden hue and floral mystery.</p>
+</div>
+</div>
+</div>
+<div class="flex-1 hidden md:block">
+<div class="relative w-full h-full min-h-[600px]">
+<img class="w-full h-full object-cover rounded-3xl cinematic-shadow" data-alt="A vibrant editorial flat-lay of assorted Indian spices like cardamom, cinnamon, cloves, and star anise arranged artistically on a dark textured background. The lighting is overhead and dramatic, casting soft shadows that give each spice a 3D feel. The color palette is rich and earthy, reflecting the pure botanical origins of the tea." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmpMqhkzFlSULem6ST86kgW3YYi7baTaPMNpdWBdJodQnu6MxKQ3ETGm2EYpeQONyk3qAT3g8XSxpM4qrnh5W9jyp21CQTeoTee4t8c0oRG-KIgAWscIS0HyoNsgc_Y4Yxa4HpLI3Kvg4TjC-1pGUVFG5hcXQG6B_i3Ph4NHdAKn-X7OlzgUXaNjokVFxxwUanjqZh1SycQhiOzSyXzjxV9J-oDYq0b2TE4ffjY-nLOMpvYYG5uiSEF-MPvf3WNXNXnFEbaQ5SPO3L"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: BENEFITS -->
+<section class="py-section-gap bg-surface-container">
+<div class="px-margin-safe max-w-container-max mx-auto">
+<div class="grid md:grid-cols-4 gap-gutter">
+<div class="flex flex-col gap-6 p-8 rounded-2xl glass-panel text-center">
+<span class="material-symbols-outlined text-secondary text-5xl" data-icon="psychology">psychology</span>
+<h5 class="font-headline-md text-[24px] text-primary">Mental Clarity</h5>
+<p class="text-body-md text-on-surface-variant">Natural L-theanine promotes calm focus and alertness.</p>
+</div>
+<div class="flex flex-col gap-6 p-8 rounded-2xl glass-panel text-center">
+<span class="material-symbols-outlined text-secondary text-5xl" data-icon="health_and_safety">health_and_safety</span>
+<h5 class="font-headline-md text-[24px] text-primary">Immune Boost</h5>
+<p class="text-body-md text-on-surface-variant">Spices rich in antioxidants to strengthen your vitality.</p>
+</div>
+<div class="flex flex-col gap-6 p-8 rounded-2xl glass-panel text-center">
+<span class="material-symbols-outlined text-secondary text-5xl" data-icon="spa">spa</span>
+<h5 class="font-headline-md text-[24px] text-primary">Anti-Inflammatory</h5>
+<p class="text-body-md text-on-surface-variant">Ginger and cinnamon soothe the body from within.</p>
+</div>
+<div class="flex flex-col gap-6 p-8 rounded-2xl glass-panel text-center">
+<span class="material-symbols-outlined text-secondary text-5xl" data-icon="heart_pulse">pulse_alert</span>
+<h5 class="font-headline-md text-[24px] text-primary">Heart Health</h5>
+<p class="text-body-md text-on-surface-variant">Promotes circulation and cardiovascular well-being.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 9: PARALLAX -->
+<section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 fixed" data-alt="A wide, atmospheric shot of an Indian spice market at dusk, with soft glowing lanterns illuminating mountains of colorful powders and whole spices. The air is thick with a hazy, warm mist, creating a sense of depth and mystery. The aesthetic is extremely cinematic and immersive, grounding the brand in its cultural origins." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBljAgCUv_CsRgqdzzvaWq5Nx3av6VKrG3mfF2zCe-YgEVycOWZQnRb9kx10sU8zoVQq4NnBLAecHSfvhTvSPh1Mg-izRZoYA8qLG0NhI04w8BNKb-46TFoLK0H3bRFBu--iJeUix8qPE87e-f2VMCb__yhn47oTwlKVLgzbA_mMV1SwRLnyMELd-m2bbD4xDnD2L6p1VT_zgWYdtof3tyU4bAoupRuLoaD5vIQjvn_PcyW4k0I8DIbv3pqmBC3SM1FLw_-bx4tl9Um" style="transform: scale(1.1);"/>
+<div class="relative z-10 text-center px-margin-safe">
+<h2 class="font-display-hero text-[64px] md:text-[100px] text-on-surface leading-none">The Essence of Time</h2>
+<p class="font-body-lg text-body-lg text-primary max-w-2xl mx-auto mt-6">Slow-brewed, slow-grown, and savored slowly.</p>
+</div>
+</section>
+<!-- Section 10: TESTIMONIALS -->
+<section class="py-section-gap px-margin-safe">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-secondary text-6xl mb-8" data-icon="format_quote">format_quote</span>
+<p class="font-headline-md text-headline-md text-on-surface italic leading-relaxed">"Imperial Chai is more than tea; it's a sensory bridge to my heritage. Each cup feels like a rainy evening in Darjeeling, wrapped in warmth and memory."</p>
+<div class="mt-12 flex flex-col items-center">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-secondary p-1">
+<img class="w-full h-full object-cover rounded-full" data-alt="A professional cinematic portrait of a middle-aged man with a refined, sophisticated appearance. He is backlit by warm studio light, creating a soft glow around his silhouette. He has a calm and appreciative expression, conveying deep emotional connection and luxury lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtPw7USj2mTBMVvFqeXXzflH4hqzzHm1nECrz9stiqa_-aNkcdBaVUlQtoSgFW-x5nA18RUEzcKtT26INF2BrBPtgIQctVQvpQv0RoKhv9cdsqBpP1u7yHAdTNm1EG1aFTKo9cc0lD9jSRXL4XwwSNiTQCmbXE1CYi6acUb9i610Eyjb6Fe44uBeLa8tEYQ6g6j9-vOktKglq6itE_2mx5B96Nyau4OWZIKhIgMOOPmb9zW-0lai5wlCWdFKERLG5knHYT4pHxaOh-"/>
+</div>
+<h6 class="font-label-caps text-label-caps text-on-surface">Arjun Kapoor</h6>
+<p class="text-on-surface-variant text-sm">Culinary Critic</p>
+</div>
+</div>
+</section>
+<!-- Section 11: ORIGIN -->
+<section class="py-section-gap">
+<div class="grid md:grid-cols-2">
+<div class="bg-primary-container p-24 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-secondary mb-4">Our Roots</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Grown in the Clouds</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Our partner estates sit at 6,000 feet, where the air is pure and the soil is rich with volcanic minerals. This extreme elevation slows growth, intensifying the flavor profiles of every leaf.</p>
+<div class="flex gap-12 mt-8">
+<div>
+<span class="block text-3xl font-headline-md text-secondary">100%</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Single Origin</span>
+</div>
+<div>
+<span class="block text-3xl font-headline-md text-secondary">Organic</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Certified</span>
+</div>
+<div>
+<span class="block text-3xl font-headline-md text-secondary">Direct</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">Ethical Trade</span>
+</div>
+</div>
+</div>
+<div class="h-[600px] md:h-auto">
+<img class="w-full h-full object-cover" data-alt="A wide panoramic view of a lush green tea estate in the Indian highlands at sunrise. Golden sunlight pierces through the morning fog, illuminating the rows of tea bushes. The scene is incredibly peaceful and prestigious, showing the natural beauty and high altitude where the premium tea leaves are sourced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPWjGABrbCFVW-B_EQVDHqb1h_AbSkj0cy9ZSrfpJw87-VkK0UdfE1Lnzh-xjQ4uCEuIsruZc4CkHbT3HI81rsaYrfve1Vp5If_ClgCVgEVaStD_RlPfOfSNd4NThi-5UIZ8-rOgWaHF5yReA7p3fa7sfUAO3DAzbP0JFdE0mX9zDOD3EbUfQO5DK6QnMYI92ESmRp5LG0JAuAkD-H9wlqYBwnDagVw9N_OTFahn_E7CuQpKowmVN-gSUSUsMuGUOfXwb7Ddf7zrgn"/>
+</div>
+</div>
+</section>
+<!-- Section 12: NEWSLETTER -->
+<section class="py-section-gap px-margin-safe max-w-container-max mx-auto">
+<div class="glass-panel p-16 rounded-[40px] relative overflow-hidden amber-glow">
+<div class="absolute inset-0 z-0 opacity-10">
+<div class="w-full h-full steam-overlay"></div>
+</div>
+<div class="relative z-10 grid md:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Join the Inner Circle</h2>
+<p class="text-on-surface-variant font-body-lg">Receive exclusive access to private reserve harvests and seasonal rituals.</p>
+</div>
+<div>
+<form class="flex flex-col gap-4">
+<input class="bg-transparent border-b border-secondary/50 py-4 font-body-lg text-on-surface focus:outline-none focus:border-secondary transition-all placeholder:text-on-surface-variant/40" placeholder="Email Address" type="email"/>
+<button class="bg-[#CD7F32] text-white py-4 font-label-caps text-label-caps mt-4 rounded-full" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 13: FINAL CTA -->
+<section class="py-section-gap text-center px-margin-safe">
+<h2 class="font-display-hero text-headline-lg md:text-[84px] text-on-surface max-w-4xl mx-auto leading-tight mb-12">Your Perfect Chai Moment Begins Here</h2>
+<button class="bg-[#CD7F32] text-white px-16 py-6 rounded-full font-label-caps text-label-caps amber-glow hover:scale-105 transition-all text-lg">Shop the Collection</button>
+</section>
+<!-- Section 14: FOOTER -->
+<footer class="bg-surface-container-lowest py-section-gap px-margin-safe w-full flex flex-col items-center gap-unit text-center border-t border-outline-variant/30">
+<div class="font-headline-lg text-headline-lg text-primary mb-8">Vanya Chai</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-12 opacity-80">© 2024 Vanya Chai. A tribute to the eternal monsoon ritual. Crafted for the sensory connoisseur.</p>
+<div class="flex flex-wrap justify-center gap-12 mb-12">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1" href="#">The Art of Brewing</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1" href="#">Boutique Locations</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1" href="#">Private Reserve</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors hover:translate-x-1" href="#">Sustainability</a>
+</div>
+<div class="flex gap-8 mb-12">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110" data-icon="share">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110" data-icon="location_on">location_on</span>
+</div>
+<div class="text-on-surface-variant/40 text-xs font-label-caps tracking-widest">
+            HANDCRAFTED IN THE INDIAN HIGHLANDS
+        </div>
+</footer>
+</body></html>
